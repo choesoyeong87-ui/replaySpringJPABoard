@@ -106,7 +106,7 @@ public class BoardController {
 	
 	@PostMapping("/update")
 	public String boardUpdate(Board b, Model model) {
-		log.info("boardUpdateForm board = " + b.toString());
+		log.info("*****boardUpdateForm board = " + b.toString());
 		try {
 			int count = boardService.modify(b);
 			if (count > 0) {

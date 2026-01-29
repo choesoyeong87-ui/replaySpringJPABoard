@@ -33,6 +33,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
+	@Transactional
 	public int modify(Board b) throws Exception {
 		Board board = boardRepository.getReferenceById(b.getNo());
 		board.setContent(b.getContent());

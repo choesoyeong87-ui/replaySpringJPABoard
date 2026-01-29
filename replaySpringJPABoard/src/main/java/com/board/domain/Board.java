@@ -2,6 +2,8 @@ package com.board.domain;
 
 import java.util.Date;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,6 +33,7 @@ public class Board {
     private String content; 
 	@Column(name="WRITER")
     private String writer;
+	@CreationTimestamp
 	@Column(name="REGDATE")
     private Date regDate;
     
